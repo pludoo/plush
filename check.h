@@ -6,13 +6,23 @@
 #include <stdlib.h>
 #include "check.h"
 
-
+// I honestly hate how horribly this looks, originally it was a file that would be loaded then printed, but I want
+// this shell to be a standalone executable, therefore I cannot have a reliance on external files
 void help() {
-    // print file
-    std::ifstream help("help.plush");
-    if (help.is_open()) {
-        std::cout << help.rdbuf();
-    }
+    std::cout << "general" << std::endl;
+    std::cout << "----------------------------------------------" << std::endl;
+    std::cout << "leave | quits the shell | usage: leave" << std::endl;
+    std::cout << "clear | clears the console | usage: clear" << std::endl;
+    std::cout << std::endl;
+    std::cout << "arithmetic" << std::endl;
+    std::cout << "----------------------------------------------" << std::endl;
+    std::cout << "add | adds two numbers | usage: add a b" << std::endl;
+    std::cout << "sub | subtracts two numbers | usage: sub a b" << std::endl;
+    std::cout << "mult | multiplies two numbers | usage: mult a b" << std::endl;
+    std::cout << "div | divides two numbers | usage: div a b" << std::endl;
+    std::cout << "power | gets a to the power of b | usage: power a b" << std::endl;
+    std::cout << "sqrt | gets the squareroot of a | usage: sqrt a" << std::endl;
+    std::cout << "----------------------------------------------" << std::endl;
 }
 
 void leave() {
@@ -74,10 +84,10 @@ bool exists(std::string init_arg, std::vector<std::string> possible_commands) {
 
 
 void execute(std::vector<std::string> &args) {
-    if (args.at(0) == "help") { help(); }
-    else if (args.at(0) == "leave") { if (args.size() > 2) { std::cout << "too many arguments | usage: leave" << std::endl; } else { leave(); } }
+    if (args.at(0) == "help") { if (args.size() > 1) { std::cout << "too many arguments | usage: help" << std::endl; } else { help(); } }
+    else if (args.at(0) == "leave") { if (args.size() > 1) { std::cout << "too many arguments | usage: leave" << std::endl; } else { leave(); } }
 
-    else if (args.at(0) == "clear") { if (args.size() > 2) { std::cout << "too many arguments | usage: clear" << std::endl; } else { clear(); } }
+    else if (args.at(0) == "clear") { if (args.size() > 1) { std::cout << "too many arguments | usage: clear" << std::endl; } else { clear(); } }
 
     else if (args.at(0) == "add") {
         if (args.size() > 3) {
