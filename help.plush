@@ -1,0 +1,15 @@
+
+general
+----------------------------------------------
+leave | quits the shell | usage: leave
+clear | clears the console | usage: clear
+
+arithmetic
+----------------------------------------------
+add | adds two numbers | usage: add a b
+sub | subtracts two numbers | usage: sub a b
+mult | multiplies two numbers | usage: mult a b
+div | divides two numbers | usage: div a b
+power | gets a to the power of b | usage: power a b
+sqrt | gets the squareroot of a | usage: sqrt a
+----------------------------------------------

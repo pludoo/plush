@@ -1,11 +1,10 @@
 #include <iostream>
 #include <vector>
-#include <map>
 
 #include "logging.h"
 #include "check.h"
 
-std::vector<std::string> commands = {"help", "leave", "add", "multiply", "divide"};
+std::vector<std::string> commands = {"help", "leave", "clear", "add", "sub", "mult", "div", "power", "sqrt"};
 
 bool active = true;
 void loop() {
