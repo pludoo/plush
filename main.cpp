@@ -22,6 +22,8 @@ void loop() {
 }
 
 int main() {
+    std::cout << "welcome to plush, a lightweight shell" << std::endl;
+    std::cout << "get started with 'help'" << std::endl;
     loop();
     return EXIT_SUCCESS;
 }

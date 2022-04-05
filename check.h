@@ -6,9 +6,12 @@
 #include <stdlib.h>
 #include "check.h"
 
-// I honestly hate how horribly this looks, originally it was a file that would be loaded then printed, but I want
+// I honestly hate how horrible this looks, originally it was a file that would be loaded then printed, but I want
 // this shell to be a standalone executable, therefore I cannot have a reliance on external files
 void help() {
+    std::cout << std::endl;
+    std::cout << "contact: jayden@pludo.dev" << std::endl;
+    std::cout << std::endl;
     std::cout << "general" << std::endl;
     std::cout << "----------------------------------------------" << std::endl;
     std::cout << "leave | quits the shell | usage: leave" << std::endl;
@@ -23,6 +26,7 @@ void help() {
     std::cout << "power | gets a to the power of b | usage: power a b" << std::endl;
     std::cout << "sqrt | gets the squareroot of a | usage: sqrt a" << std::endl;
     std::cout << "----------------------------------------------" << std::endl;
+    std::cout << std::endl;
 }
 
 void leave() {
