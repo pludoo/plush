@@ -4,7 +4,9 @@
 #include "logging.h"
 #include "check.h"
 
-std::vector<std::string> commands = {"help", "leave", "clear", "add", "sub", "mult", "div", "power", "sqrt"};
+std::vector<std::string> commands = {"help", "leave", "clear", "create", "wdir", "cdir",
+                                     "rename", "hash", "add", "sub", "mult", "div",
+                                     "power", "sqrt", "delete"};
 
 bool active = true;
 void loop() {
